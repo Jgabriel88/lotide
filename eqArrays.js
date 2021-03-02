@@ -2,9 +2,11 @@
 
 const eqArrays = function (arrayOne, arrayTwo) {
   for (i = 0; i < arrayOne.length; i++) {
-    assertEqual(arrayOne[i], arrayTwo[i])
+    if (arrayOne[i] !== arrayTwo[i]) {
+      return false
+    }
   }
-  return
+  return true
 }
 
 const assertEqual = function (actual, expected) {
@@ -18,3 +20,5 @@ const assertEqual = function (actual, expected) {
 
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true)
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true)
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), false)
