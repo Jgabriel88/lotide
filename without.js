@@ -16,40 +16,20 @@ console.log("To be removed: ", toRemove)
 console.log("The new array is: ", without(words, toRemove))
 
 
-// without([1, 2, 3], [1]) // => [2, 3]
-// without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
 
 
-// const assertArraysEqual = function (arrayOne, arrayTwo) {
-
-//   for (i = 0; i < arrayOne.length; i++) {
-//     if (arrayOne.length !== arrayTwo.length) {
-//       console.log(`Assertion Failed: ${arrayOne} !== ${arrayTwo}`)
-//       return
+// Another approach
+// const without = function(sourceArray, itemsToRemove) {
+//   let newArray = [];
+//   for(let i = 0; i < sourceArray.length; i++){
+//     let mark = 0;
+//     for(let j =0; j < itemsToRemove.length; j++){
+//       if (sourceArray[i] === itemsToRemove[j]) {
+//         mark = 1
+//       }
 //     }
-//     if (arrayOne[i] !== arrayTwo[i]) {
-//       console.log(`Assertion Failed: ${arrayOne} !== ${arrayTwo}`)
-//       return
+//     if (mark == 0) {
+//       newArray.push(sourceArray[i]);
 //     }
-//   }
-//   console.log(`Assertion Passed: ${arrayOne} === ${arrayTwo}`)
-// }
-
-
-// const eqArrays = function (arrayOne, arrayTwo) {
-//   for (i = 0; i < arrayOne.length; i++) {
-//     if (arrayOne[i] !== arrayTwo[i]) {
-//       return false
 //     }
-//   }
-//   return true
-// }
-
-// const assertEqual = function (actual, expected) {
-//   if (actual === expected) {
-//     console.log(`Assertion Passed: ${actual} === ${expected}`);
-//   } else {
-//     console.log(`Assertion Failed: ${actual} !== ${expected}`);
-//   }
-// };
-
+//     return newArray;
