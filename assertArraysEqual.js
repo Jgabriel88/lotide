@@ -18,3 +18,4 @@ const assertArraysEqual = function (arrayOne, arrayTwo) {
 assertArraysEqual([1, 2, 3], [1, 2, 3, 5])
 assertArraysEqual([1, 2, 3, 4], [1, 2, 3])
 assertArraysEqual([1, 2, 3], [1, 2, 3])
+assertArraysEqual(["abc", "def", "ghi", 4, 2, 1], ["abc", "def", "ghi", 4, 2, 1])
