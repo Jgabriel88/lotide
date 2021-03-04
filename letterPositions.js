@@ -1,23 +1,23 @@
-const assertArraysEqual = function (arrayOne, arrayTwo) {
+const assertArraysEqual = function(arrayOne, arrayTwo) {
 
-  for (i = 0; i < arrayOne.length; i++) {
+  for (let i = 0; i < arrayOne.length; i++) {
     if (arrayOne.length !== arrayTwo.length) {
-      console.log(`Assertion Failed: ${arrayOne} !== ${arrayTwo}`)
-      return
+      console.log(`Assertion Failed: ${arrayOne} !== ${arrayTwo}`);
+      return;
     }
     if (arrayOne[i] !== arrayTwo[i]) {
-      console.log(`Assertion Failed: ${arrayOne} !== ${arrayTwo}`)
-      return
+      console.log(`Assertion Failed: ${arrayOne} !== ${arrayTwo}`);
+      return;
     }
   }
-  console.log(`Assertion Passed: ${arrayOne} === ${arrayTwo}`)
-}
+  console.log(`Assertion Passed: ${arrayOne} === ${arrayTwo}`);
+};
 
 
 
 
 
-const letterPositions = function (sentence) {
+const letterPositions = function(sentence) {
   const results = {};
 
   for (let i = 0; i < sentence.length; i++) {

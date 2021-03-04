@@ -1,19 +1,19 @@
-const words = ["Gabriel", "Lucas", "Alexandre"]
-const toRemove = ["Alexandre", "Gabriel"]
-let cleaned = []
+const words = ["Gabriel", "Lucas", "Alexandre"];
+const toRemove = ["Alexandre", "Gabriel"];
+let cleaned = [];
 const without = function (words, toRemove) {
-  for (i = 0; i < words.length; i++) {
+  for (let i = 0; i < words.length; i++) {
     if (!toRemove.includes(words[i])) {
-      cleaned.push(words[i])
+      cleaned.push(words[i]);
     }
   }
-  return cleaned
+  return cleaned;
 };
 
 
-console.log("The original array is: ", words)
-console.log("To be removed: ", toRemove)
-console.log("The new array is: ", without(words, toRemove))
+console.log("The original array is: ", words);
+console.log("To be removed: ", toRemove);
+console.log("The new array is: ", without(words, toRemove));
 
 
 

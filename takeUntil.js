@@ -1,14 +1,14 @@
-const takeUntil = function (array, callback) {
-  const output = []
+const takeUntil = function(array, callback) {
+  const output = [];
   for (let i = 0; i < array.length; i++) {
-    let result = callback(array[i])
+    let result = callback(array[i]);
     if (!result) {
-      output.push(array[i])
+      output.push(array[i]);
     } else {
-      return output
+      return output;
     }
   }
-}
+};
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
