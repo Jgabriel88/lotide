@@ -1,6 +1,5 @@
 const assert = require('chai').assert;
 const head = require('../head');
-const assertEqual = require('../assertEqual');
 
 
 describe("#head", () => {
@@ -17,6 +16,5 @@ describe("#head", () => {
   it('returns I for ["I", "am", "a", "student", "at", "LHL"]', () => {
     assert.strictEqual(head(["I", "am", "a", "student", "at", "LHL"]), "I");
   });
-
 
 });
